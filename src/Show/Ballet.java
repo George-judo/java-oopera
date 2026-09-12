@@ -2,20 +2,21 @@ package Show;
 
 import People.Actor;
 import People.Director;
+import People.Person;
 
 import java.util.ArrayList;
 
 public class Ballet extends MusicalShow{
-    public String choreographer;
+    protected Person choreographer;
 
-    public Ballet(String title, int duration, Director director, String musicAuthor,
-                  String librettoText, String choreographer) {
+    public Ballet(String title, int duration, Director director, Person musicAuthor,
+                  String librettoText, Person choreographer) {
         super(title, duration, director, musicAuthor, librettoText);
         this.choreographer = choreographer;
     }
 
-    public Ballet(String title, int duration, Director director, String musicAuthor,
-                  String librettoText, String choreographer, ArrayList<Actor> listOfActors) {
+    public Ballet(String title, int duration, Director director, Person musicAuthor,
+                  String librettoText, Person choreographer, ArrayList<Actor> listOfActors) {
         super(title, duration, director, musicAuthor, librettoText);
         this.choreographer = choreographer;
         this.listOfActors = listOfActors;

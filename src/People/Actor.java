@@ -3,7 +3,7 @@ package People;
 import java.util.Objects;
 
 public class Actor extends Person{
-    public int height;
+    private int height;
 
     public Actor(String surname, String name, Gender gender, int height) {
         super(surname, name, gender);

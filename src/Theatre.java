@@ -1,6 +1,7 @@
 import People.Actor;
 import People.Gender;
 import People.Director;
+import People.Person;
 import Show.Show;
 import Show.Opera;
 import Show.Ballet;
@@ -14,8 +15,8 @@ public class Theatre {
         Director director1 = new Director("Смирнов", "Алексей", Gender.MALE, 15);
         Director director2 = new Director("Козлова", "Мария", Gender.FEMALE, 10);
 
-        String musicAuthor = "Чайковский";
-        String choreographer = "Петипа";
+        Person musicAuthor = new Person("Vfzrjdcrbq", "Jktu", Gender.MALE);
+        Person choreographer = new Person("FYlhtq", "Fylhtq", Gender.MALE);
 
         Show show = new Show("Обычный спектакль", 60, director1);
         Opera opera = new Opera("Опреа", 50, director1, musicAuthor, "Либрето текст", 10);

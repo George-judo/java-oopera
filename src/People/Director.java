@@ -3,7 +3,7 @@ import Show.Show;
 import java.util.ArrayList;
 
 public class Director extends Person {
-    public int numberOfShows;
+    private int numberOfShows;
 
     public Director(String surname, String name, Gender gender, int numberOfShows) {
         super(surname, name, gender);

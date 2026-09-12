@@ -6,10 +6,10 @@ import People.Director;
 import java.util.ArrayList;
 
 public class Show {
-    public String title;
-    public int duration;
-    public Director director;
-    public ArrayList<Actor> listOfActors = new ArrayList<>();
+    protected String title;
+    protected int duration;
+    protected Director director;
+    protected ArrayList<Actor> listOfActors = new ArrayList<>();
 
     public Show(String title, int duration, Director director) {
         this.title = title;
@@ -39,7 +39,7 @@ public class Show {
         }
         if (!isExist) {
             listOfActors.add(newActor);
-            System.out.println("Актер " + newActor.surname + " добавлен(a)");
+            System.out.println("Актер " + newActor.getSurname() + " добавлен(a)");
         } else {
             System.out.println("такой актер уже есть .");
             return;
@@ -50,9 +50,9 @@ public class Show {
     public void exchangeActors (Actor newActor, String surname){
         int indexOfRemovedActor = -1;
         for (int i = 0; i < listOfActors.size(); i++) {
-            if (listOfActors.get(0).surname.equals(surname)){
+            if (listOfActors.get(0).getSurname().equals(surname)){
                 indexOfRemovedActor = i;
-                System.out.println("Актер " + surname + " заменен на " + newActor.surname);
+                System.out.println("Актер " + surname + " заменен на " + newActor.getSurname());
             }
         }
         if (indexOfRemovedActor >= 0){
